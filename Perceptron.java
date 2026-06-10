@@ -26,13 +26,15 @@ public class Perceptron {
                 {1, 1}
         };
 
-        int[] targets = {
-                // TODO: choose AND or OR target values
-        };
 
-        // TODO 1: initialize weights randomly
+        int [] OrTargets = { 0, 1, 1, 1 };
+        double [] OrWeights = new double[3];
+
+        int [] AndTarget = { 0, 0, 0, 1 };
+        double [] AndWeights = new double[3];
 
         // TODO 2: train perceptron until all inputs are classified correctly
+
 
         // TODO 3: print final weights
 
@@ -41,9 +43,18 @@ public class Perceptron {
         // TODO 5: test final perceptron on all inputs
     }
 
-    // TODO 6: create setRandomWeights()
+    static void setRandomWeights(double[] weights) {
+        weights[0] = Math.random()*2 - 1;
+        weights[1] = Math.random()*2 - 1;
+        weights[2] = Math.random()*2 - 1;
+    }
 
     // TODO 7: create predict()
+    static boolean predict(double[][] inputs, double[] weights){
+
+
+        return false;
+    }
     // Should calculate:
     // activation = input1*w1 + input2*w2 + bias*wbias
     // If activation >= 0, return 1
