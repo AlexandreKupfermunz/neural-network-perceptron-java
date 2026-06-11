@@ -10,63 +10,17 @@ The objective of the project is to demonstrate how a simple artificial neuron ca
 
 ## Features
 
-Random weight initialization
-
-Support for AND and OR logical functions
-
-Binary step activation function
-
-Bias neuron implementation
-
-Perceptron Learning Rule
-
-Iterative supervised training
-
-Automatic convergence detection
-
-Training iteration tracking
-
-Optional verbose learning output
-
-Configurable learning rate
+Random weight initialization, Support for AND and OR logical functions, Binary step activation function, Bias neuron implementation, Perceptron Learning Rule, Iterative supervised training, Automatic convergence detection, Training iteration tracking, Optional verbose learning output, Configurable learning rate
 
 ## Concepts Demonstrated
 
-Perceptrons
-
-Artificial Neurons
-
-Machine Learning Fundamentals
-
-Supervised Learning
-
-Binary Classification
-
-Linear Decision Boundaries
-
-Activation Functions
-
-Perceptron Learning Rule
-
-Gradient-Free Learning
-
-Neural Network Foundations
-
-Object-Oriented Programming (Java)
+Perceptrons, Artificial Neurons, Machine Learning Fundamentals, Supervised Learning, Binary Classification, Linear Decision Boundaries, Activation Functions, Perceptron Learning Rule, Gradient-Free Learning, Neural Network Foundations
 
 ## Technical Skills
 
-Algorithm Design
+Algorithm Design, Machine Learning Fundamentals
 
-Machine Learning Fundamentals
-
-Java Programming
-
-Numerical Computation
-
-Software Development
-
-Debugging and Testing
+Java Programming, Numerical Computation, Debugging and Testing
 
 ## How It Works
 
