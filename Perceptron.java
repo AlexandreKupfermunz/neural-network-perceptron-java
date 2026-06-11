@@ -5,7 +5,6 @@
 public class Perceptron {
 
     static double learningRate = 0.1;
-    static double[] weights = new double[3]; 
 
     public static void main(String[] args) {
         boolean verbose = false;
@@ -21,21 +20,27 @@ public class Perceptron {
                 {1, 1}
         };
 
-
         int [] orTargets = { 0, 1, 1, 1 };
-        double [] orWeights = new double[3];
+        double[] orWeights = new double[3];
+        setRandomWeights(orWeights);
 
-        int [] andTarget = { 0, 0, 0, 1 };
-        double [] andWeights = new double[3];
+        int [] andTargets = { 0, 0, 0, 1 };
+        double[] andWeights = new double[3];
+        setRandomWeights(andWeights);
 
-        // TODO 2: train perceptron until all inputs are classified correctly
+        System.out.println("OR training: ");
+        int orIterations = train(orTargets, inputs, orWeights, verbose);
+        System.out.println("# of iterations for OR = " + orIterations);
+        System.out.print("OR final weights: ");
+        printWeights(orWeights, true);
+        System.out.println();
 
-
-        // TODO 3: print final weights
-
-        // TODO 4: print number of iterations
-
-        // TODO 5: test final perceptron on all inputs
+        System.out.println("AND training: ");
+        int andIterations = train(andTargets, inputs, andWeights, verbose);
+        System.out.println("# of iterations for AND = " + andIterations);
+        System.out.print("AND final weights: ");
+        printWeights(andWeights, true);
+        System.out.println();
     }
 
     static void setRandomWeights(double[] weights) {
@@ -75,20 +80,22 @@ public class Perceptron {
 
                     weights[0] = weights[0] + learningRate * error * inputs[i][0];
                     weights[1] = weights[1] + learningRate * error * inputs[i][1];
-                    weights[2] = weights[2] + learningRate * error; // bias update
+                    weights[2] = weights[2] + learningRate * error;
 
-                    if (verbose) {
-                        System.out.println("Input: " + inputs[i][0] + ", " + inputs[i][1]);
-                        System.out.println("Target: " + targets[i]);
-                        System.out.println("Output: " + output);
-                        System.out.println("Error: " + error);
-                        System.out.println("Weights: " + weights[0] + ", " + weights[1] + ", " + weights[2]);
-                        System.out.println();
-                    }
                 }
+
             }
+            printWeights(weights, verbose);
         }
 
         return iterations;
     }
+
+    static void printWeights(double[] weights, boolean verbose){
+        if (verbose == true) {
+
+                        System.out.println("Weights: " + weights[0] + ", " + weights[1] + ", " + weights[2]);
+                    }
+    }
+
 }
